@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>B&D Composite</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" sizes="64x64" href="Images/B&D%20composite%20logo.jpg">
+    </head>
+    <body>
+        <body1>
+            <header>
+                <a href=index.html>
+                    <img src="Images/B&D%20composite%20logo.jpg">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="fencing%20and%20decking.html">Fencing&decking</a></li>
+                        <li><a href="prices%20and%20quotes.html">Prices&Quotes</a></li>
+                    </ul>
+                    
+                </nav>
+            </header>
+
+            <main>
+                <img src="Images/B&D%20composite%20logo.jpg">
+                <p>Welcome to B&D Composite, we are a family business based in Auckland, Albany.</p>
+                <p>we sell a multitude of carports and sunshades as seen below.</p>
+                <hr>
+            </main>
+        </body1>
+        
+        <body2>
+            <div class="body2">
+                <p>Our materials are sourced from China and are manufactured to a high quality. The frames of these products are made of aluminium and the board are polycarbonate. The polycarbonate boards block 99% of the UV rays and the manufacturer provides a 10 year warranty for the boards.</p>
+                <img src="Images/6.jpg" height=350px>
+                <img src="Images/unnamed.jpg" height=350px>
+                <img src="Images/4.jpg" height=350px>
+                <p>These sunshades and pergolas are perfect for getting out of the rain and blistering summer sun in New Zealand. They are 100% UV proof. The 304 bolts are made from stainless steel so there is no rusting.</p>
+            </div>
+            <hr>
+                <br>
+                <div class="body3">
+                <p>We have a few sizes available for you to choose from, however, custom made sizes are available too. Custom made sunshades and pergolas will take extra time to manufacture and deliver to New Zealand.<br> We have a wide selection of colours available for you to choose from as well, though we only stock white coloured frames and a few other colours and we only stock grey and dark grey polycarbonate boards. Once again, custom colours can be ordered but will again take more time to arrive.  All panels are 100% UV proof and will not yellow over the 10 year warranty of the panels.</p>
+            </div>
+        </body2>
+
+    </body>
+    
+    <slider class="slider">
+        <div id="slider">
+            <div id="box">
+                <img src="Images/2.jpg">
+            </div>
+
+            <!-- buttons for controls slider -->
+            <button class="prew fa fa-chevron-left" onclick="prewImage()"></button>
+            <button class="next fa fa-chevron-right" onclick="nextImage()"></button>
+	   </div>
+    </slider>
+    <br>
+    <div class="colours">
+        <p class="colour-intro"> We offer a range of colours for frames and panels and you can have a look for yourself down below.</p>
+        <h2>Frames:</h2>
+        <img src="Images/Aluminum%20Frame%20color-1.jpg"  alt="Aluminium frame colours" border="2"> 
+        
+        <br>
+        <h2>Panels:</h2>
+        <img src="Images/1-Transparent.jpg" title="Transparent" alt="Panel colours" height="210px" border="2">
+        <img src="Images/2-Light%20Grey.jpg" title="Grey" alt="Panel colours" height="210px" border="2">
+        <img src="Images/3-Dark%20Grey.jpg" title="Dark Grey" alt="Panel colours" height="210px" border="2">
+        <img src="Images/4-Blue.jpg" title="Blue" alt="Panel colours" height="210px" border="2">
+        <img src="Images/5-Brown.jpg" title="Brown" alt="Panel colours" height="210px" border="2">
+        <img src="Images/6-Mat%20Brown.jpg" title="Matte Brown" alt="Panel colours" height="210px" border="2">
+        <p class="colourname">Transparent Light-Grey Grey Blue Brown Matte-Brown</p>
+        <hr>
+    </div>
+       
+    
+    <script type="text/javascript">
+
+        var slider_content = document.getElementById('box');
+
+        // contain images in an array
+        var image = ['Images/2', 'Images/4','Images/5','Images/7', 'Images/6', 'Images/8', 'Images/9', 'Images/10', 'Images/11', 'Images/12', 'Images/13', 'Images/14', 'Images/16', 'Images/17'];
+
+        var i = image.length;
+
+
+        // function for next slide 
+
+        function nextImage(){
+            if (i<image.length) {
+                i= i+1;
+            }else{
+                i = 1;
+            }
+              slider_content.innerHTML = "<img src="+image[i-1]+".jpg>";
+        }
+
+
+        // function for prew slide
+
+        function prewImage(){
+
+            if (i<image.length+1 && i>1) {
+                i= i-1;
+            }else{
+                i = image.length;
+            }
+              slider_content.innerHTML = "<img src="+image[i-1]+".jpg>";
+
+        }
+
+
+      // script for auto image slider
+
+      setInterval(nextImage , 4000);
+
+  </script>
+
+    
+    <div class="footer">
+        <p>Contact us: <br>Mobile: 0211077728(English), 0212665200(Chinese) <br>Email: nuodanielxu@gmail.com</p>
+        powered by learning html and css in 2 days
+    </div>
+</html>
